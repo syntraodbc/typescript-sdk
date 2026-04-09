@@ -30,11 +30,17 @@
 
 ---
 
-## The TypeScript SDK for Syntra ODBC
+## What is Syntra ODBC?
 
-This monorepo is the official TypeScript SDK for [Syntra ODBC](https://syntraodbc.com), the ODBC driver that lets you query **QuickBooks Desktop** with standard SQL from any tool that speaks Postgres. The packages in this repo give Node.js and TypeScript developers full **IntelliSense** on every QuickBooks table and column, with zero hand-written schemas.
+In plain English: **[Syntra ODBC](https://syntraodbc.com) lets you pull data out of QuickBooks Desktop and put it anywhere.** Excel, Power BI, Tableau, a custom dashboard, a nightly report, an AI assistant, your own app. Anything that can talk to a normal database, can now talk to QuickBooks.
 
-If you have ever tried to query QuickBooks Desktop from code, you know the story: the SDK is COM-only, the field names are undocumented, and every integration starts with a week of reverse engineering. [Syntra ODBC](https://syntraodbc.com) exposes QuickBooks as a Postgres-wire server so you can connect with any `pg` client, any ORM, any BI tool. This SDK goes one step further: it ships the schema as strongly typed TypeScript so your editor knows the shape of `customers`, `invoices`, `invoice_lines`, and 100+ other QuickBooks tables before you even run the query.
+**Why that matters.** QuickBooks Desktop stores your entire business inside a single company file on one computer. Customers, invoices, payments, vendors, inventory, payroll, everything. Getting that data out for a report, a dashboard, or a custom integration has always been painful, because the only official way in is Intuit's COM-based SDK, which only works from Windows, only from certain programming languages, and only after you wrestle with a hand-written XML format that has no documentation and no autocomplete.
+
+**What Syntra ODBC does.** It installs on the same PC as QuickBooks and exposes every QuickBooks table as if it were a standard database. Your tools think they are talking to a regular SQL server. They send normal SQL like `SELECT * FROM customers WHERE balance > 1000`, and Syntra translates that to QuickBooks under the hood and returns real rows. No XML, no COM, no weeks of reverse engineering. If a tool can connect to Postgres or any ODBC database, it can now connect to QuickBooks.
+
+**Who uses it.** Bookkeepers pulling QuickBooks data into Excel or Power BI. Small and mid-size businesses building internal dashboards. Developers adding a QuickBooks integration to their app. Data teams running analytics against accounting data. Anyone who has ever typed "how do I get data out of QuickBooks Desktop" into a search engine.
+
+**Where this repo fits in.** Syntra ODBC already works with any standard SQL client, so Node.js and TypeScript developers can connect to QuickBooks today with just the `pg` package and hand-write their database queries. This repo is the next level up: the official **TypeScript SDK** that adds full **IntelliSense** on top. When you type `schema.`, your editor shows a dropdown of every QuickBooks table. When you type `invoices.`, it shows every column on that table. When you write a query, TypeScript checks it at compile time. No hand-written schemas, no memorizing field names, no runtime surprises. You get the same experience writing a QuickBooks query as you do writing any other typed database query.
 
 Built and maintained by the team at [Syntra ODBC](https://syntraodbc.com). Auto-synced with every driver release. MIT licensed.
 
