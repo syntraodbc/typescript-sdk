@@ -1,0 +1,39 @@
+{
+  "name": "@syntraodbc/typescript-sdk",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TypeScript SDK for Syntra ODBC. Query QuickBooks Desktop from Node.js with full IntelliSense.",
+  "license": "MIT",
+  "homepage": "https://syntraodbc.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syntraodbc/typescript-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/syntraodbc/typescript-sdk/issues"
+  },
+  "author": "Syntra ODBC <support@syntraodbc.com> (https://syntraodbc.com)",
+  "keywords": [
+    "quickbooks",
+    "quickbooks-desktop",
+    "odbc",
+    "drizzle-orm",
+    "typescript",
+    "sdk",
+    "nodejs",
+    "postgres"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "clean": "pnpm -r clean"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.12.0"
+}

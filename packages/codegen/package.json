@@ -1,0 +1,56 @@
+{
+  "name": "@syntraodbc/codegen",
+  "version": "0.0.0",
+  "description": "CLI that introspects a live Syntra ODBC instance and generates typed Drizzle schemas for your QuickBooks tables and custom fields.",
+  "keywords": [
+    "quickbooks",
+    "quickbooks-desktop",
+    "codegen",
+    "drizzle",
+    "typescript",
+    "odbc",
+    "syntra",
+    "postgres",
+    "cli"
+  ],
+  "homepage": "https://syntraodbc.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syntraodbc/typescript-sdk.git",
+    "directory": "packages/codegen"
+  },
+  "bugs": {
+    "url": "https://github.com/syntraodbc/typescript-sdk/issues"
+  },
+  "author": "Syntra ODBC <support@syntraodbc.com> (https://syntraodbc.com)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "syntra-codegen": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "echo \"[codegen] build not wired up yet\" && exit 0",
+    "typecheck": "echo \"[codegen] typecheck not wired up yet\" && exit 0",
+    "test": "echo \"[codegen] no tests yet\" && exit 0",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

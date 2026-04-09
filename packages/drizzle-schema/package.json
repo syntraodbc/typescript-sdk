@@ -1,0 +1,57 @@
+{
+  "name": "@syntraodbc/drizzle-schema",
+  "version": "0.0.0",
+  "description": "Typed Drizzle ORM schema for every QuickBooks Desktop table exposed by Syntra ODBC. Full IntelliSense, zero hand-written types.",
+  "keywords": [
+    "quickbooks",
+    "quickbooks-desktop",
+    "drizzle",
+    "drizzle-orm",
+    "typescript",
+    "odbc",
+    "syntra",
+    "postgres",
+    "orm",
+    "schema"
+  ],
+  "homepage": "https://syntraodbc.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syntraodbc/typescript-sdk.git",
+    "directory": "packages/drizzle-schema"
+  },
+  "bugs": {
+    "url": "https://github.com/syntraodbc/typescript-sdk/issues"
+  },
+  "author": "Syntra ODBC <support@syntraodbc.com> (https://syntraodbc.com)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "echo \"[drizzle-schema] build not wired up yet\" && exit 0",
+    "typecheck": "echo \"[drizzle-schema] typecheck not wired up yet\" && exit 0",
+    "test": "echo \"[drizzle-schema] no tests yet\" && exit 0",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "peerDependencies": {
+    "drizzle-orm": "^0.33.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

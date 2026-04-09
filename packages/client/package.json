@@ -1,0 +1,58 @@
+{
+  "name": "@syntraodbc/client",
+  "version": "0.0.0",
+  "description": "Zero-config typed TypeScript client for Syntra ODBC. Wraps postgres.js with IntelliSense on every QuickBooks Desktop table and column.",
+  "keywords": [
+    "quickbooks",
+    "quickbooks-desktop",
+    "typescript",
+    "odbc",
+    "syntra",
+    "postgres",
+    "client",
+    "sdk"
+  ],
+  "homepage": "https://syntraodbc.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syntraodbc/typescript-sdk.git",
+    "directory": "packages/client"
+  },
+  "bugs": {
+    "url": "https://github.com/syntraodbc/typescript-sdk/issues"
+  },
+  "author": "Syntra ODBC <support@syntraodbc.com> (https://syntraodbc.com)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "echo \"[client] build not wired up yet\" && exit 0",
+    "typecheck": "echo \"[client] typecheck not wired up yet\" && exit 0",
+    "test": "echo \"[client] no tests yet\" && exit 0",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "peerDependencies": {
+    "postgres": "^3.4.0"
+  },
+  "dependencies": {
+    "@syntraodbc/drizzle-schema": "workspace:*"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
