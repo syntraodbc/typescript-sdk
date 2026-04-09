@@ -1,6 +1,6 @@
 {
   "name": "@syntraodbc/client",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Zero-config typed TypeScript client for Syntra ODBC. Wraps postgres.js with IntelliSense on every QuickBooks Desktop table and column.",
   "keywords": [
     "quickbooks",
@@ -34,20 +34,19 @@
   },
   "files": [
     "dist",
+    "src",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "echo \"[client] build not wired up yet\" && exit 0",
-    "typecheck": "echo \"[client] typecheck not wired up yet\" && exit 0",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "echo \"[client] no tests yet\" && exit 0",
-    "clean": "rm -rf dist *.tsbuildinfo"
-  },
-  "peerDependencies": {
-    "postgres": "^3.4.0"
+    "clean": "rimraf dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@syntraodbc/drizzle-schema": "workspace:*"
+    "@syntraodbc/drizzle-schema": "workspace:^",
+    "postgres": "^3.4.5"
   },
   "engines": {
     "node": ">=18"

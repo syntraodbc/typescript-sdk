@@ -1,6 +1,6 @@
 {
   "name": "@syntraodbc/drizzle-schema",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Typed Drizzle ORM schema for every QuickBooks Desktop table exposed by Syntra ODBC. Full IntelliSense, zero hand-written types.",
   "keywords": [
     "quickbooks",
@@ -36,17 +36,22 @@
   },
   "files": [
     "dist",
+    "src",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "echo \"[drizzle-schema] build not wired up yet\" && exit 0",
-    "typecheck": "echo \"[drizzle-schema] typecheck not wired up yet\" && exit 0",
+    "generate": "node ../../scripts/emit-drizzle.mjs",
+    "build": "pnpm run generate && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "echo \"[drizzle-schema] no tests yet\" && exit 0",
-    "clean": "rm -rf dist *.tsbuildinfo"
+    "clean": "rimraf dist *.tsbuildinfo"
   },
   "peerDependencies": {
-    "drizzle-orm": "^0.33.0"
+    "drizzle-orm": "^0.33.0 || ^0.34.0 || ^0.35.0 || ^0.36.0 || ^0.37.0 || ^0.38.0 || ^0.39.0 || ^0.40.0 || ^0.41.0 || ^0.42.0 || ^0.43.0 || ^0.44.0 || ^0.45.0"
+  },
+  "devDependencies": {
+    "drizzle-orm": "^0.45.2"
   },
   "engines": {
     "node": ">=18"

@@ -1,0 +1,70 @@
+// AUTO-GENERATED. DO NOT EDIT.
+// Regenerate with: pnpm --filter @syntraodbc/drizzle-schema run generate
+//
+// Source: schemas/quickbooks.json
+// Table:  preferences (57 columns)
+
+import { pgTable, boolean, date, integer, numeric, text, varchar } from 'drizzle-orm/pg-core';
+
+export const preferences = pgTable('preferences', {
+  _row_id: text('_row_id'),
+  accounting_preferences_is_using_account_numbers: boolean('accounting_preferences_is_using_account_numbers'),
+  accounting_preferences_is_requiring_accounts: boolean('accounting_preferences_is_requiring_accounts'),
+  accounting_preferences_is_using_class_tracking: boolean('accounting_preferences_is_using_class_tracking'),
+  accounting_preferences_is_using_audit_trail: boolean('accounting_preferences_is_using_audit_trail'),
+  accounting_preferences_is_assigning_journal_entry_numbers: boolean('accounting_preferences_is_assigning_journal_entry_numbers'),
+  accounting_preferences_closing_date: date('accounting_preferences_closing_date'),
+  finance_charge_preferences_annual_interest_rate: numeric('finance_charge_preferences_annual_interest_rate', { precision: 12, scale: 4 }),
+  finance_charge_preferences_min_finance_charge: numeric('finance_charge_preferences_min_finance_charge', { precision: 12, scale: 2 }),
+  finance_charge_preferences_grace_period: integer('finance_charge_preferences_grace_period'),
+  finance_charge_preferences_finance_charge_account_ref_list_id: varchar('finance_charge_preferences_finance_charge_account_ref_list_id', { length: 36 }),
+  finance_charge_preferences_finance_charge_account_ref_full_name: varchar('finance_charge_preferences_finance_charge_account_ref_full_name', { length: 209 }),
+  finance_charge_preferences_is_assessing_for_overdue_charges: boolean('finance_charge_preferences_is_assessing_for_overdue_charges'),
+  finance_charge_preferences_is_marked_to_be_printed: boolean('finance_charge_preferences_is_marked_to_be_printed'),
+  jobs_and_estimates_preferences_is_using_estimates: boolean('jobs_and_estimates_preferences_is_using_estimates'),
+  jobs_and_estimates_preferences_is_using_progress_invoicing: boolean('jobs_and_estimates_preferences_is_using_progress_invoicing'),
+  jobs_and_estimates_preferences_is_printing_items_with_zero_amounts: boolean('jobs_and_estimates_preferences_is_printing_items_with_zero_amounts'),
+  multi_currency_preferences_is_multi_currency_on: boolean('multi_currency_preferences_is_multi_currency_on'),
+  multi_currency_preferences_home_currency_ref_list_id: varchar('multi_currency_preferences_home_currency_ref_list_id', { length: 36 }),
+  multi_currency_preferences_home_currency_ref_full_name: varchar('multi_currency_preferences_home_currency_ref_full_name', { length: 209 }),
+  multi_location_inventory_preferences_is_multi_location_inventory_available: boolean('multi_location_inventory_preferences_is_multi_location_inventory_available'),
+  multi_location_inventory_preferences_is_multi_location_inventory_enabled: boolean('multi_location_inventory_preferences_is_multi_location_inventory_enabled'),
+  purchases_and_vendors_preferences_is_using_inventory: boolean('purchases_and_vendors_preferences_is_using_inventory'),
+  purchases_and_vendors_preferences_days_bills_are_due: integer('purchases_and_vendors_preferences_days_bills_are_due'),
+  purchases_and_vendors_preferences_is_automatically_using_discounts: boolean('purchases_and_vendors_preferences_is_automatically_using_discounts'),
+  purchases_and_vendors_preferences_default_discount_account_ref_list_id: varchar('purchases_and_vendors_preferences_default_discount_account_ref_list_id', { length: 36 }),
+  purchases_and_vendors_preferences_default_discount_account_ref_full_name: varchar('purchases_and_vendors_preferences_default_discount_account_ref_full_name', { length: 209 }),
+  sales_and_customers_preferences_default_ship_method_ref_list_id: varchar('sales_and_customers_preferences_default_ship_method_ref_list_id', { length: 36 }),
+  sales_and_customers_preferences_default_ship_method_ref_full_name: varchar('sales_and_customers_preferences_default_ship_method_ref_full_name', { length: 209 }),
+  sales_and_customers_preferences_default_fob: varchar('sales_and_customers_preferences_default_fob', { length: 13 }),
+  sales_and_customers_preferences_default_markup: numeric('sales_and_customers_preferences_default_markup', { precision: 12, scale: 4 }),
+  sales_and_customers_preferences_is_tracking_reimbursed_expenses_as_income: boolean('sales_and_customers_preferences_is_tracking_reimbursed_expenses_as_income'),
+  sales_and_customers_preferences_is_auto_applying_payments: boolean('sales_and_customers_preferences_is_auto_applying_payments'),
+  sales_and_customers_preferences_price_levels_is_using_price_levels: boolean('sales_and_customers_preferences_price_levels_is_using_price_levels'),
+  sales_and_customers_preferences_price_levels_is_rounding_sales_price_up: boolean('sales_and_customers_preferences_price_levels_is_rounding_sales_price_up'),
+  sales_tax_preferences_default_item_sales_tax_ref_list_id: varchar('sales_tax_preferences_default_item_sales_tax_ref_list_id', { length: 36 }),
+  sales_tax_preferences_default_item_sales_tax_ref_full_name: varchar('sales_tax_preferences_default_item_sales_tax_ref_full_name', { length: 209 }),
+  sales_tax_preferences_default_taxable_sales_tax_code_ref_list_id: varchar('sales_tax_preferences_default_taxable_sales_tax_code_ref_list_id', { length: 36 }),
+  sales_tax_preferences_default_taxable_sales_tax_code_ref_full_name: varchar('sales_tax_preferences_default_taxable_sales_tax_code_ref_full_name', { length: 209 }),
+  sales_tax_preferences_default_non_taxable_sales_tax_code_ref_list_id: varchar('sales_tax_preferences_default_non_taxable_sales_tax_code_ref_list_id', { length: 36 }),
+  sales_tax_preferences_default_non_taxable_sales_tax_code_ref_full_name: varchar('sales_tax_preferences_default_non_taxable_sales_tax_code_ref_full_name', { length: 209 }),
+  sales_tax_preferences_is_using_vendor_tax_code: boolean('sales_tax_preferences_is_using_vendor_tax_code'),
+  sales_tax_preferences_is_using_customer_tax_code: boolean('sales_tax_preferences_is_using_customer_tax_code'),
+  sales_tax_preferences_is_using_amounts_include_tax: boolean('sales_tax_preferences_is_using_amounts_include_tax'),
+  current_app_access_rights_is_automatic_login_allowed: boolean('current_app_access_rights_is_automatic_login_allowed'),
+  current_app_access_rights_automatic_login_user_name: varchar('current_app_access_rights_automatic_login_user_name', { length: 29 }),
+  current_app_access_rights_is_personal_data_access_allowed: boolean('current_app_access_rights_is_personal_data_access_allowed'),
+  items_and_inventory_preferences_enhanced_inventory_receiving_enabled: boolean('items_and_inventory_preferences_enhanced_inventory_receiving_enabled'),
+  items_and_inventory_preferences_is_inventory_expiration_date_enabled: boolean('items_and_inventory_preferences_is_inventory_expiration_date_enabled'),
+  items_and_inventory_preferences_is_tracking_on_sales_transactions_enabled: boolean('items_and_inventory_preferences_is_tracking_on_sales_transactions_enabled'),
+  items_and_inventory_preferences_is_tracking_on_purchase_transactions_enabled: boolean('items_and_inventory_preferences_is_tracking_on_purchase_transactions_enabled'),
+  items_and_inventory_preferences_is_tracking_on_inventory_adjustment_enabled: boolean('items_and_inventory_preferences_is_tracking_on_inventory_adjustment_enabled'),
+  items_and_inventory_preferences_is_tracking_on_build_assembly_enabled: boolean('items_and_inventory_preferences_is_tracking_on_build_assembly_enabled'),
+  items_and_inventory_preferences_fifo_enabled: boolean('items_and_inventory_preferences_fifo_enabled'),
+  items_and_inventory_preferences_fifo_effective_date: date('items_and_inventory_preferences_fifo_effective_date'),
+  items_and_inventory_preferences_is_rsb_enabled: boolean('items_and_inventory_preferences_is_rsb_enabled'),
+  items_and_inventory_preferences_is_barcode_enabled: boolean('items_and_inventory_preferences_is_barcode_enabled'),
+});
+
+export type Preferences = typeof preferences.$inferSelect;
+export type NewPreferences = typeof preferences.$inferInsert;
